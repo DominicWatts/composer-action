@@ -34,7 +34,7 @@ RUN set -xe && \
         php7-xsl \
         php7-zip \
         php7-zlib \
-        php7-sockets
+        php7-sockets \
     && \
     apk add --no-cache --virtual .build-deps \
         libzip-dev \
