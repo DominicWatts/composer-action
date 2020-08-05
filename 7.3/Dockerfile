@@ -5,8 +5,8 @@
 #
 FROM php:7.3-alpine
 
-LABEL repository="https://github.com/MilesChou/composer-action" \
-    maintainer="MilesChou <jangconan@gmail.com>"
+LABEL repository="domwhttps://github.com/dominicwatts/composer-action" \
+    maintainer="Dominic Xigen <dominic@xigen.co.uk>"
 
 RUN set -xe && \
     apk add --no-cache \

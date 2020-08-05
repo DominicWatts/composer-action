@@ -1,16 +1,5 @@
 # Docker and GitHub Actions for Composer
 
-[![GitHub Release][ico-release]][link-github-release]
-[![License][ico-license]](LICENSE)
-
-![Testing](https://github.com/MilesChou/composer-action/workflows/Testing/badge.svg)
-
-GitHub Actions for [Composer](https://getcomposer.org). Base on Docker official [PHP](https://hub.docker.com/_/php) image, and installed [hirak/prestissimo](https://github.com/hirak/prestissimo) package. 
-
-[ico-release]: https://img.shields.io/github/tag/MilesChou/composer-action.svg
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
-[link-github-release]: https://github.com/MilesChou/composer-action/releases
-
 ## Why build another one image?
 
 Actually, I want to follow DRY principle and use official [Composer](https://hub.docker.com/_/composer) image. But see the following composer.json:
@@ -50,7 +39,7 @@ Finally, I think that build image on every version is the good idea.
 Via GitHub Workflow
 
 ```yaml
-- uses: MilesChou/composer-action@master
+- uses: DominicWatts/composer-action@master
   with:
     args: install
 ```
@@ -58,28 +47,26 @@ Via GitHub Workflow
 Use install image
 
 ```yaml
-- uses: MilesChou/composer-action/install@master
+- uses: DominicWatts/composer-action/install@master
 ```
 
 With specify PHP version
 
 ```yaml
-- uses: MilesChou/composer-action/5.5/install@master
+- uses: DominicWatts/composer-action/5.5/install@master
 ```
 
 ## Usage for Docker
 
-See [Docker Hub](https://hub.docker.com/r/mileschou/composer/)
+See [Docker Hub](https://hub.docker.com/r/domw/composer/)
 
 ## Supported tags and respective `Dockerfile` links
 
-* [`7.4` (7.4/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.4/Dockerfile)
-* [`7.3` (7.3/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.3/Dockerfile)
-* [`7.2` (7.2/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.2/Dockerfile)
-* [`7.1` (7.1/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.1/Dockerfile)
-* [`7.0` (7.0/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/7.0/Dockerfile)
-* [`5.6` (5.6/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.6/Dockerfile)
-* [`5.5` (5.5/Dockerfile)](https://github.com/MilesChou/composer-action/blob/master/5.5/Dockerfile)
+* [`7.4` (7.4/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.4/Dockerfile)
+* [`7.3` (7.3/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.3/Dockerfile)
+* [`7.2` (7.2/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.2/Dockerfile)
+* [`7.1` (7.1/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.1/Dockerfile)
+* [`7.0` (7.0/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.0/Dockerfile)
 
 The following is built-in tools:
 

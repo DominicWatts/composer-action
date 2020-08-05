@@ -3,6 +3,6 @@
 #
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
-FROM mileschou/composer:7.1
+FROM domw/composer:7.1
 
 CMD ["install"]
