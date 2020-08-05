@@ -14,7 +14,6 @@ LATEST_VERSION=7.4
 
 # 5.5 has some custom commands
 VERSIONS="
-5.6
 7.0
 7.1
 7.2
