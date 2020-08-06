@@ -42,6 +42,14 @@ RUN set -xe && \
     && \
     docker-php-ext-install -j "$(getconf _NPROCESSORS_ONLN)" \
         zip \
+        gd \
+        bcmath \
+        intl \
+        pdo_mysql \
+        soap \
+        xsl \
+        zip \
+        sockets
     && \
     apk del --no-cache .build-deps \
     && \
