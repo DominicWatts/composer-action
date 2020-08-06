@@ -12,6 +12,14 @@ RUN set -xe && \
     apk add --no-cache \
         shadow \
         curl \
+        freetype-dev \
+	    g++ \
+        icu \
+	    icu-dev \
+	    libjpeg-turbo-dev \
+	    libpng-dev \
+	    libxml2-dev \
+	    libxslt-dev \
         vim \
         git \
         tree \
@@ -44,6 +52,9 @@ RUN set -xe && \
     apk add --no-cache --virtual .build-deps \
         libzip-dev \
         zlib-dev \
+    && \
+    docker-php-ext-configure \
+	    gd --with-jpeg-dir=/usr/local/ --with-freetype-dir=/usr/include/ \
     && \
     docker-php-ext-install -j "$(getconf _NPROCESSORS_ONLN)" \
         zip \
