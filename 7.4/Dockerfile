@@ -54,7 +54,7 @@ RUN set -xe && \
         soap \
         xsl \
         zip \
-        sockets
+        sockets \
     && \
     apk del --no-cache .build-deps \
     && \
