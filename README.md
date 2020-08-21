@@ -78,6 +78,40 @@ See [Docker Hub](https://hub.docker.com/r/domw/composer/)
 * [`7.1` (7.1/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.1/Dockerfile)
 * [`7.0` (7.0/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.0/Dockerfile)
 
+## Magento 2 
+
+Includes required PHP extensions
+
+    ext-bcmath
+
+    ext-ctype
+
+    ext-curl
+
+    ext-dom
+
+    ext-gd
+
+    ext-hash
+
+    ext-iconv
+
+    ext-intl
+
+    ext-mbstring
+
+    ext-openssl
+
+    ext-pdo_mysql
+
+    ext-simplexml
+
+    ext-soap
+
+    ext-xsl
+
+    ext-zip
+
 ## Credits
 
 * [MilesChou](https://github.com/MilesChou)
