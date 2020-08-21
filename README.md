@@ -1,4 +1,4 @@
-# Docker and GitHub Actions for Composer
+# Magento 2 Docker Composer with tagged PHP versions for command line use, Git Hub actions, Git Lab CI
 
 ## Why build another one image?
 
@@ -60,6 +60,16 @@ With specify PHP version
 
 See [Docker Hub](https://hub.docker.com/r/domw/composer/)
 
+    docker run --rm -v $PWD:/app domw/composer:7.0
+
+    docker run --rm -v $PWD:/app domw/composer:7.1
+
+    docker run --rm -v $PWD:/app domw/composer:7.2
+
+    docker run --rm -v $PWD:/app domw/composer:7.3
+
+    docker run --rm -v $PWD:/app domw/composer:7.4
+
 ## Supported tags and respective `Dockerfile` links
 
 * [`7.4` (7.4/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.4/Dockerfile)
@@ -67,12 +77,6 @@ See [Docker Hub](https://hub.docker.com/r/domw/composer/)
 * [`7.2` (7.2/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.2/Dockerfile)
 * [`7.1` (7.1/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.1/Dockerfile)
 * [`7.0` (7.0/Dockerfile)](domwhttps://github.com/dominicwatts/composer-action/blob/master/7.0/Dockerfile)
-
-The following is built-in tools:
-
-* git
-* zip
-* [hirak/prestissimo](https://github.com/hirak/prestissimo)
 
 ## Credits
 
