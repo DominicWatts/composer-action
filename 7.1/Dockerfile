@@ -5,7 +5,8 @@
 #
 FROM php:7.1-alpine
 
-LABEL repository="domwhttps://github.com/dominicwatts/composer-action" \
+LABEL org.opencontainers.image.source="https://github.com/dominicwatts/composer-action" \
+    repository="https://github.com/dominicwatts/composer-action" \
     maintainer="Dominic Xigen <dominic@xigen.co.uk>"
 
 RUN set -xe && \
@@ -74,14 +75,9 @@ RUN set -xe && \
 ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_MEMORY_LIMIT=-1 \
     COMPOSER_HOME=/tmp \
-    COMPOSER_PATH=/usr/local/bin/composer \
-    COMPOSER_VERSION=2.0.9
+    COMPOSER_PATH=/usr/bin/composer
 
-COPY --from=composer:2.0.9 /usr/bin/composer /usr/local/bin/composer
-
-RUN set -xe && \
-        composer global require hirak/prestissimo && \
-        composer clear-cache
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 COPY docker-entrypoint /usr/local/bin/docker-entrypoint
 
@@ -89,4 +85,4 @@ WORKDIR /app
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 
-CMD ["--info"]
+CMD ["composer"]
